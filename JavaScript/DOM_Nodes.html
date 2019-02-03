@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Nodes</title>
+</head>
+<body>
+
+	<h1 id="firstElement"></h1>
+
+	<p id="next">This is the para first<strong>Strong text in para</strong></p>
+
+<script type="text/javascript">
+	var first = document.getElementById("firstElement");
+	console.log(first.firstElementChild.nodeName);
+
+	var last = document.getElementById("next");
+	console.log = (last.firstChild.nodeName);
+</script>
+</body>
+</html>
