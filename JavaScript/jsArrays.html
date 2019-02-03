@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var fruits = ["Apple", "Banana", "Orange", "kivi"];
+		fruits.push("Mango");
+		fruits.pop();
+		document.write(fruits[1]); document.write("<br>");
+		document.write(fruits.length);document.write("<br>");
+
+		var colors = ["Red", "Green", "Blue"];
+		var removed = colors.splice(0,1); // Remove the first element
+		var sortColor = colors.sort();
+		document.write("Sorted Array : ", colors);document.write("<br>");
+		 
+		document.write(colors);document.write("<br>"); // Prints: Green,Blue
+		document.write(removed);document.write("<br>"); // Prints: Red (one item array)
+		document.write(removed.length); document.write("<br>");// Prints: 1
+		removed = colors.splice(1, 0, "Pink", "Yellow"); // Insert two items at position one
+		document.write(colors);document.write("<br>"); // Prints: Green,Pink,Yellow,Blue
+		document.write(removed);document.write("<br>"); // Empty array
+		document.write(removed.length); document.write("<br>");// Prints: 0
+		 
+		removed = colors.splice(1, 1, "Purple", "Voilet"); // Insert two values, remove one
+		document.write(colors);document.write("<br>"); //Prints: Green,Purple,Voilet,Yellow,Blue
+		document.write(removed); document.write("<br>");// Prints: Pink (one item array)
+		document.write(removed.length); // Prints: 1
+
+		var numbers = [5, 20, 10, 75, 50, 100];
+		numbers.sort(); // Sorts numbers array
+		alert(numbers); // Outputs: 10,100,20,5,50,75
+		
+	</script>
+
+</body>
+</html>
