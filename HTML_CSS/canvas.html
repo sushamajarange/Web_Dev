@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			context.moveTo(50, 150);
+			context.lineTo(200, 50);
+			context.lineTo(100, 30);
+			context.lineTo(200, 50);
+			context.stroke();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="300px;" height="200px;"></canvas>
+</body>
+</html>
