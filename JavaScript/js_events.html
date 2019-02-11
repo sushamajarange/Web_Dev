@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Events</title>
+</head>
+<body>
+	<div id="getDate">
+		<button onclick="GetDate()">Click me to get Date</button>
+		<button onmouseover="GetDate()" onmouseout="clearDate()">over me to get date</button>
+	</div>
+	<script type="text/javascript">
+		function GetDate(){
+			var date = document.getElementById("getDate");
+			date.innerHTML = Date();
+		}
+		function clearDate(){
+			var date = document.getElementById("getDate");
+			date.innerHTML = '';
+		}
+	</script>
+
+</body>
+</html>
