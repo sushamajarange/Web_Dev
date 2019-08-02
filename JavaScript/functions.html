@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        button {
+            width:auto;
+            height:50px;
+            border:1px solid black;
+        }
+    </style>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<div class="container"> 
+    <button id="first" onclick="forFirstClick()" onmouseover="onmouseoverFun()" > Click me to change my backgroundColor</button>
+    <button id="second" onclick="changemyTextColor()" onmousemove="noneBackground()">Click me to change my text coclor</button>
+</div>
+
+<script>
+    function forFirstClick(){
+        document.getElementById("first").style.backgroundColor = "pink";
+    }
+    function changemyTextColor(){
+        document.getElementById("second").style.color = "red";
+    }
+    function onmouseoverFun(){
+        document.getElementById("first").style.backgroundColor = "green";
+    }
+    function noneBackground(){
+        document.getElementById("second").style.backgroundColor = "white";
+    }
+    
+</script>
+
+</body>
+</html>
