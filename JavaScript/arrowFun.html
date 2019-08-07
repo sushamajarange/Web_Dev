@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow</h2>
+//  example for higher order Arrow function 
+
+<div style="font-family:helvetica"><h2>ES6: Write Higher Order Arrow Functions</h2>
+
+    It's time we see how powerful arrow functions are when processing data.
+    <br><br>
+    Arrow functions work really well with higher order functions, such as map(), filter(), and reduce(), that take other functions as arguments for processing collections of data.
+    <br><br>
+    Read the following code:
+    <br><br>
+        FBPosts.filter(function(post) {
+          return post.thumbnail !== null && post.shares > 100 && post.likes > 500;
+        })
+    <br><br>
+    We have written this with filter() to at least make it somewhat readable. Now compare it to the following code which uses arrow function syntax instead:
+    <br><br>
+        FBPosts.filter((post) => post.thumbnail !== null && post.shares > 100 && post.likes > 500)
+    <br><br>
+    This code is more succinct and accomplishes the same task with fewer lines of code.
+    <br><br>
+    Use arrow function syntax to compute the square of only the positive integers (fractions are not integers) in the array realNumberArray and store the new array in the variable squaredIntegers.<br><br>
+</div>
+    
+<script>
+    // Without arrow
+    var myConcat = function(arr1, arr2) {
+        "use strict";
+        return arr1.concat(arr2);
+    };
+
+    // Arrow function
+    var arr;
+    arr => arr1.concat(arr2);
+
+    // test your code
+    console.log(myConcat([1, 2], [3, 4, 5]));
+
+</script>
+
+</body>
+</html>
