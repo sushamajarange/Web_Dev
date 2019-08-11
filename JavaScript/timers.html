@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Timers</h2>
+<h3>See the output in console</h3>
+
+  <button onclick="setTimeout(myFunction, 2000)">Try it</button>
+
+  <button onclick="clearInterval(myVar)">Stop time</button>
+
+  <p>A script on this page starts this clock:</p><p id="demo"></p>
+<script>
+function myFunction() {
+  alert('Hello, mt timeout is 2000 ');
+}
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+
+</script>
+
+</body>
+</html>
