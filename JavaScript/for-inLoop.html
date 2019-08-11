@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>For in</h2>
+<h3>See the output in console</h3>
+<code>
+    var string1 = "";<br>
+    var object1 = {a: 1, b: 2, c: 3};<br>
+
+    for (var property1 in object1) {<br>
+        string1 += object1[property1];<br>
+    }<br>
+
+    console.log(string1);
+</code>
+<script>
+    var string1 = "";
+    var object1 = {a: 1, b: 2, c: 3};
+
+    for (var property1 in object1) {
+        string1 += object1[property1];
+    }
+    console.log(string1);// 123
+
+    let arr = [1,42,3,145,35,61,17,81,90,10];
+    for(var i in arr){
+        console.log(arr[i]);
+    }
+</script>
+
+</body>
+</html>
