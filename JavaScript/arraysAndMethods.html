@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Arrays and its methods</h2>
+<h3>See the output in console</h3>
+<ul>
+    <li>splice(a,b)</li>
+    <li>splice(arr, index, var1,var2)</li>
+    <li>slice()</li>
+    <li>Copy an Array with the Spread Operator</li>
+</ul>
+
+<script>
+    function sumOfTen(arr) {
+        console.log(arr.splice(1, 2));
+        return arr.reduce((a, b) => a + b);
+    }
+    console.log(sumOfTen([2, 5, 1, 5, 2, 1])); // 10
+
+    /* Modify the function using splice() to remove the first two elements of the array and add 'DarkSalmon' 
+    and 'BlanchedAlmond' in their respective places.*/
+    function htmlColorNames(arr) {
+    arr.splice(arr,2, "DarkSalmon","BlanchedAlmond")
+    return arr;
+    } 
+    
+    console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
+    // Arr will be : ['DarkSalmon','BlanchedAlmond','LavenderBlush', 'PaleTurqoise', 'FireBrick']
+
+    let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+    let todaysWeather = weatherConditions.slice(1, 3);
+    // todaysWeather equals ['snow', 'sleet'];
+    // weatherConditions still equals ['rain', 'snow', 'sleet', 'hail', 'clear']
+
+    //Copy an Array with the Spread Operator
+    function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+        newArr.push([...arr]);
+        num--;
+    }
+    return newArr;
+    }
+    console.log(copyMachine([true, false, true], 2));
+
+
+    function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning', ...fragment, 'is', 'fun']; 
+    return sentence;
+    }
+    console.log(spreadOut());//learning,to,code,is,fun
+
+
+    //Check For The Presence of an Element With indexOf()
+    function quickCheck(arr, elem) {
+        if(arr.indexOf(elem) > 0){
+        return true;
+        }
+        else{
+        return false;
+        }
+    }
+    console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+    
+</script>
+
+</body>
+</html>
