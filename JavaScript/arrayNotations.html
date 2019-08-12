@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Notations </h2>
+<h3>See the output in console</h3>
+
+<script>
+    // Bracket Notation
+    let myArray = ["a", "b", "c", "d"];
+    myArray[1] = "baby";
+    console.log(myArray);
+     //Dot notation
+     let obj = {
+        cat: 'meow',
+        dog: 'woof'
+    };
+    let dog = 'cat';
+    let sound = obj.dog;
+    console.log(sound);  // woof
+    
+    // unshift() - Add elements starting of the array and push() -add elements end of the array 
+    function mixedNumbers(arr) {
+    arr.unshift("I",  2, "three" );
+    arr.push(7, "VIII, 9");
+    return arr;
+    }
+    console.log(mixedNumbers(['IV', 5, 'six']));
+
+    // shift() - Removes elements starting of the array and pop() -removes elements end of the array 
+    function popShift(arr) {
+    let popped = arr.pop(); 
+    let shifted = arr.shift(); 
+    return [shifted, popped];
+    }
+    console.log(popShift(['challenge', 'is', 'not', 'complete']));
+</script>
+
+</body>
+</html>
