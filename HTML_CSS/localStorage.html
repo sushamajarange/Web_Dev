@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web storage</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (localStorage) {
+			$(document).ready(function(){
+				$(".save").click(function(){
+					//get input name
+					var firstName = $ ("#firstName").val();
+					// store data
+					localStorage.setItem("first_name ", firstName);
+					alert("Your first name is saved");	
+
+					
+				});
+				$(".access").click(function(){
+					// Retrieve data
+    				alert("Hi, " + localStorage.getItem("first_name"));	
+				});
+			});
+		}
+	</script>
+
+</head>
+<body>
+	<form>
+		<label>
+			First name<input type="text" id="firstName">
+		</label>
+		<button type="button" class="save">Save</button>
+		<button type="button" class="access">Get Name</button>
+	</form>
+</body>
+</html>

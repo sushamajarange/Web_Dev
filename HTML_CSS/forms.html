@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is of forms.</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			First Name : <input type="text" name="fName"><br>
+			Last Name : <input type="text" name="lName"><br>
+			Mobile Number : <input type="mobile" name="mibile"><br>
+			email-id : <input type="email" name="eamil"><br>
+			Password : <input type="password" name="password">
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>Languages</legend>
+			<input type="checkbox" name="">
+			<label>Marathi</label>
+			<input type="checkbox" name="">
+			<label>Hindi</label>
+			<input type="checkbox" name="">
+			<label>English</label>
+		</fieldset>
+		<br><br>
+
+		<fieldset>
+			<legend>Gender</legend>
+			<input type="radio" name="gender" value="male" id="male">
+			<label >Male</label>
+			<input type="radio" name="gender" value="female" id="female">
+			<label > Female</label>
+		</fieldset>
+
+		<br>
+		<select>
+			<option>Pune</option>
+			<option selected="preselected">Singapore</option>
+			<option>Matori</option>
+		</select>
+		<select multiple="multiple">
+			<optgroup label="Current">
+				<option>Pune</option>
+				<option>Matori</option>
+			</optgroup>
+
+			<optgroup label="Other">
+				<option>Kurla</option>
+				<option>Alandi</option>
+			</optgroup>
+		</select>
+		<br>
+		<label>Address : </label>
+		<textarea placeholder="Enter your address" rows="4"></textarea>
+		<br><br>
+
+		<label>Select file</label><input type="file" name="upload file"><br>
+		<button>Click me</button><br>
+
+	</form>
+</body>
+</html>
