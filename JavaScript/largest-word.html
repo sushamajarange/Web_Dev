@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Find the largest word in the given string </h2>
+
+<div class="container"> 
+    <p>
+            findLongestWordLength("The quick brown fox jumped over the lazy dog");` `
+        OUTPUT : 6
+    </p>
+</div>
+
+<script>
+   
+    function findLongestWordLength(str) {
+    var maxLen = 0;
+    var word = str.split(' ');
+
+    for(var i= 0; i < word.length;i++){
+        if(word[i].length > maxLen){
+        maxLen = word[i].length;
+        }
+    }    
+    return maxLen;
+    }
+    findLongestWordLength("The quick brown fox jumped over the lazy dog");` `
+</script>
+
+</body>
+</html>
