@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript basicOperationsOnObject </h2>
+
+<div class="container"> 
+</div>
+
+<script>
+    let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28
+    };
+    // add thre more entries in foods object (key-value pair)
+    foods['bananas'] = 13;
+    foods['grapes'] = 35;
+    foods['strawberries'] = 27;
+
+    console.log(foods);
+    
+
+    let userActivity = {
+    id: 23894201352,
+    date: 'January 1, 2017',
+    data: {
+        totalUsers: 51,
+        online: 42
+    }
+    };
+    // Set the value of the online key to 45 in data key 
+    userActivity.data.online = 45;
+
+    console.log(userActivity);
+
+
+    let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+    };
+    function checkInventory(scannedItem) {
+    return foods[scannedItem]; // returns 25
+    }
+    delete foods.plums; // will delete plums
+    console.log(checkInventory("apples"));
+
+    let users = {
+    Alan: { age: 27, online: false},
+    Jeff: {age: 32, online: true },
+    Sarah: { age: 48, online: false},
+    Ryan: { age: 19, online: true}
+    };
+
+    function isEveryoneHere(obj) {
+    return ((users.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan')) ? true : false); // True
+    }
+    console.log(isEveryoneHere(users));
+
+
+//Generate an Array of All Object Keys with Object.keys()
+    let users = {
+    Alan: { age: 27, online: false},
+    Jeff: {age: 32, online: true },
+    Sarah: { age: 48, online: false},
+    Ryan: { age: 19, online: true}
+    };
+    function getArrayOfUsers(obj) {
+    return Object.keys(obj);
+    }
+    console.log(getArrayOfUsers(users));
+
+    //Modify an Array Stored in an Object
+    let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+        username: 'kennethCodesAllDay',
+        joinDate: 'March 26, 2016',
+        organization: 'freeCodeCamp',
+        friends: ['Sam', 'Kira', 'Tomo'],
+        location: {city: 'San Francisco', state: 'CA', country: 'USA'}
+    }
+    };
+    function addFriend(userObj, friend) {
+    user.data.friends.push('Pete');
+    return user.data.friends;       // Sam,Kira,Tomo,Pete
+    }
+    console.log(addFriend(user, 'Pete'));
+
+</script>
+
+</body>
+</html>
