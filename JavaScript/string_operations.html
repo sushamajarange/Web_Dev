@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String operations </h2>
+
+<div class="container"> 
+</div>
+
+<script>
+    function reverseString(str) {
+        return str.split('').reverse().join(''); // olleh
+    }
+    reverseString("hello"); 
+
+
+    /* OR
+    function reverseString(str) {
+        var newString = "";
+        for (var i = str.length - 1; i >= 0; i--) {
+            newString += str[i];
+        }
+        return newString;
+    }
+    */
+
+// Factorial
+    function factorialize(num) {
+    if(num===0){
+        return 1;
+    }
+    for(var i= (num-1) ; i>=1;i--){
+        num = num*i;
+    }
+    return num;
+    }
+
+    factorialize(5);
+
+    // Confirm the Ending
+    function confirmEnding(str, target) {
+        return str.slice(str.length - target.length) === target;
+        // using built-in method 'endsWith()'
+        return str.endsWith(target); // true
+    }
+    confirmEnding("Bastian", "n");
+
+    // Truncate a string
+    function truncateString(str, num) {
+        return str.length > num ? str.substring(0, num) + '...' : str; 
+    }
+    truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+
+    function findElement(arr, func) {
+    let num = 0;
+    
+</script>
+
+</body>
+</html>
