@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Regular expressions</h2>
+<h3>See the output in console</h3>
+
+ 
+<script>
+
+    // TO capitalise the first letter of the string
+    function titleCase(str) {
+        return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
+    }
+    titleCase("I'm a little tea pot");
+
+
+</script>
+
+</body>
+</html>
