@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Obejct Oriented Programming</h2>
+<h3>See the output in console</h3>
+
+ 
+<script>
+    function Dog(name) {
+    this.name = name;
+    }
+    Dog.prototype.numLegs = 4;      // Use prototype for code duplication
+    let beagle = new Dog("Snoopy");
+    
+    Dog.prototype = {
+        constructor : Dog,
+        numLegs: 2, 
+        eat: function() {
+            console.log("nom nom nom"); 
+        }, 
+        describe: function() {
+            console.log("My name is " + this.name); 
+        }
+    };
+
+    Dog.prototype.isPrototypeOf(beagle);  // returns true
+    typeof Dog.prototype; // => object
+</script>
+
+</body>
+</html>
