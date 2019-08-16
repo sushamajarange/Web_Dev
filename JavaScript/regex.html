@@ -5,6 +5,10 @@
 <h2>Regular expressions</h2>
 <h3>See the output in console</h3>
 
+<p> Get your numbers from the entered string </p>
+<input type="text" id="getTxt" style="width: 300px;" placeholder="Enter your string with noumbers..">
+<button onclick="getNumbers()">Get numbers</button><br>
+<textarea id="textArea" cols="40" rows="3"></textarea>
  
 <script>
 
@@ -13,6 +17,20 @@
         return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
     }
     titleCase("I'm a little tea pot");
+
+    // Get the numbers from entered string
+    function getNumbers(){
+        var inputStr = document.getElementById("getTxt").value;
+        var result = inputStr.match(/\d+/g);
+       // alert(result);
+
+        if(inputStr != null){
+            for(var i=0; i<result.lenght; i++){
+                console.log("in for loop");
+                document.getElementById("textArea").value += result[i];
+            }
+        }
+    }
 
 
 </script>
