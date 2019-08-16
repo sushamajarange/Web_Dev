@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Inheritance</h2>
+<h3>See the output in console</h3>
+
+ 
+<script>
+
+    function Animal() { }
+    Animal.prototype.eat = function() { 
+        console.log("nom nom nom"); 
+        document.write("nom nom nom !");    
+    };
+
+    function Dog() { }
+    Dog.prototype = Object.create(Animal.prototype);
+    Dog.prototype.constructor = Dog;
+
+    Dog.prototype.bark = function(){
+        console.log("Woof!");
+        document.write("Woof!");    
+    };
+
+    let beagle = new Dog();
+
+    beagle.eat(); // Should print "nom nom nom"
+    beagle.bark(); // Should print "Woof!"
+
+</script>
+
+</body>
+</html>
