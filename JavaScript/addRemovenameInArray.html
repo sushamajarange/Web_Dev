@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Add book name in array and remove from array </h2>
+<h3>See the output in console</h3>
+
+<script>
+    var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+    function add (arr, bookName) {
+        let arry = [...arr];
+        arry.push(bookName);
+        return arry;
+        document.write(arry);
+    }
+    function remove (arr, bookName) {
+        let arry = [...arr];
+        if (arry.indexOf(bookName) >= 0) { 
+            arry.splice(arry.indexOf(bookName), 1);
+            return arry;
+            document.write(arry);
+        }
+    }
+    var newBookList = add(bookList, 'A Brief History of Time');
+    var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+    var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+    console.log(bookList);
+
+
+</script>
+
+</body>
+</html>
