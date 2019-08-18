@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+
+Addition : <p id="add"></p>
+Substractions : <p id="sub"></p>
+Multiplication : <p id="mul"></p>
+Division : <p id="div"></p>
+
+<script>
+    function myFunctionAdd(p1, p2) {
+    return p1 + p2;
+    }
+    document.getElementById("add").innerHTML = myFunctionAdd(4, 3);
+
+    function myFunctionSub(p1, p2) {
+    return p1 - p2;
+    }
+    document.getElementById("sub").innerHTML = myFunctionSub(10, 3);
+
+    function myFunctionMul(p1, p2) {
+   return p1 * p2;
+    }
+    document.getElementById("mul").innerHTML = myFunctionMul(50, 6);
+
+    function myFunctionDiv(p1, p2) {
+    return p1 / p2;
+    }
+    document.getElementById("div").innerHTML = myFunctionDiv(100, 10);
+</script>
+
+</body>
+</html>
