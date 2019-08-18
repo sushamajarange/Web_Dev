@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Shift(), pop(), push(), unshift()</h2>
+<h3>See the output in console</h3>
+
+<script>
+
+    var fruits = ['Apple', 'Banana','Grapes', 'Mango', 'Papai'];
+    fruits.push('Orange');  //["Apple", "Banana", "Grapes", "Mango", "Papai", "Orange"]
+
+    fruits.shift();     // "Apple"
+
+    fruits.unshift('Lemon');    // It'll add 'Lemon' in start of array and return 6
+    // fruits : ["Lemon", "Banana", "Grapes", "Mango", "Papai", "Orange"]
+
+    fruits.unshift(3, 4, 'Kiwi'); // 9
+    // fruits will be : (9) [3, 4, "Kiwi", "Lemon", "Banana", "Grapes", "Mango", "Papai", "Orange"]
+
+    fruits.pop();   //  "Orange"
+
+    // unshift() - Add elements starting of the array and push() -add elements end of the array 
+    function mixedNumbers(arr) {
+    arr.unshift("I",  2, "three" );
+    arr.push(7, "VIII, 9");
+    return arr;
+    }
+    console.log(mixedNumbers(['IV', 5, 'six']));
+
+    // shift() - Removes elements starting of the array and pop() -removes elements end of the array 
+    function popShift(arr) {
+    let popped = arr.pop(); 
+    let shifted = arr.shift(); 
+    return [shifted, popped];
+    }
+    console.log(popShift(['challenge', 'is', 'not', 'complete']));
+</script>
+
+</body>
+</html>
