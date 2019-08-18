@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Check the entered word is no or strin </h2>
+<h3>See the output in console</h3>
+<div id="demo">
+    <input type="text" name="text" id="getword">
+    <button onclick="chkWhetherStrorNo()">Check</button>
+</div>
+<script>
+    function chkWhetherStrorNo(){
+        var str = document.getElementById("getword").value;
+        if(isNaN(str)){
+            return  alert("No, Its not a Number");
+        }
+        else{
+            return  alert("Yes, Its a Number");
+        }
+    }
+</script>
+
+</body>
+</html>
