@@ -3,7 +3,8 @@
 <body>
 
 <p id="demo"></p>
-
+<br>
+<p id="type_of"></p>
 <script>
 var x1 = {};
 var x2 = "";
@@ -21,6 +22,18 @@ document.getElementById("demo").innerHTML =
 "x5: " + typeof x5 + "<br>" +
 "x6: " + typeof x6 + "<br>" +
 "x7: " + typeof x7 + "<br>";
+
+// typeOf function
+var x = 5;
+//x = 5 + 7;    // x.valueOf() is 12, typeof x is a number
+//x = 5 + "7";  // x.valueOf() is 57, typeof x is a string
+//x = "5" + 7;  // x.valueOf() is 57, typeof x is a string
+//x = 5 - 7;    // x.valueOf() is -2, typeof x is a number
+//x = 5 - "7";  // x.valueOf() is -2, typeof x is a number
+//x = "5" - 7;  // x.valueOf() is -2, typeof x is a number
+//x = 5 - "x";  // x.valueOf() is NaN, typeof x is a number
+
+document.getElementById("type_of").innerHTML = x.valueOf() + " " + typeof x;
 </script>
 
 </body>
