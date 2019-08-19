@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> All types of pop-ups</h2>
+<h3>
+    <ol>
+        <li>alert() </li>
+        <li>prompt()<br>
+            <button class="primary-btn" onclick="myPrompt()">Click for Prompt</button>
+            <p id="demo" style="color: pink;"></p>
+        </li>
+        <li>confirm<br>
+            <button onclick="myConfirmBox()">Click to Condirm</button>
+            <p id="getText" style="color: red"></p>
+        </li>
+    </ol>
+</h3>
+
+<h3>See the output in console</h3>
+
+<script>
+    function myPrompt(){
+        var person = prompt("Please enter your name", "Harry Potter");
+        if (person != null) {
+            document.getElementById("demo").innerHTML = "Hello " + person + "! How are you today?";
+        }
+    }
+
+    function myConfirmBox(){
+        var confirmBox = confirm("Press for Confirm");
+        var text;
+        if(confirmBox === true){
+            text = "You Pressed OK !!";
+        }
+        else{
+            text = "You Pressed Cancel !!";
+        }
+        document.getElementById('getText').innerHTML = text;
+        
+    }
+
+</script>
+
+</body>
+</html>
