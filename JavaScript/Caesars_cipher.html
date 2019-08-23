@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Caesars cipher text  </h2>
+<h3>See the output in console</h3>
+ <p> 
+ </p>
+<script>
+    function rot13(str) {
+      // Split str into a character array
+      return str.split('')
+      // Iterate over each character in the array
+        .map.call(str, function(char) {
+          // Convert char to a character code
+          x = char.charCodeAt(0);
+          // Checks if character lies between A-Z
+          if (x < 65 || x > 90) {
+            return String.fromCharCode(x);  // Return un-converted character
+          }
+          //N = ASCII 78, if the character code is less than 78, shift forward 13 places
+          else if (x < 78) {
+            return String.fromCharCode(x + 13);
+          }
+          // Otherwise shift the character 13 places backward
+          return String.fromCharCode(x - 13);
+        }).join('');  // Rejoin the array into a string
+    }
+
+    /* OR 
+
+    return str.replace(/[A-Z]/g, L => String.fromCharCode((L.charCodeAt(0) % 26) + 65));
+    */ 
+</script>
+
+</body>
+</html>
