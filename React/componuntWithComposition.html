@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html>
-
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 <body>
   
-<script>
-class Car {
-  constructor(name) {
-    this.brand = name;
+<div id="mydiv"></div>
+
+<script type="text/babel">
+class Hello extends React.Component {
+  render() {
+    return <h1>Hello World!</h1>
   }
 }
 
-mycar = new Car("Ford");
-
-document.write(mycar.brand);
-
-const ChildComponent = () => {
-  return (
-    <div>
-      <p>I am the child</p>
-    </div>
-  );
-};
-
-class ParentComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <h1>I am the parent</h1>
-        { /* change code below this line */ }
-        <ChildComponent />
-        { /* change code above this line */ }
-      </div>
-    );
-  }
-};
-
+ReactDOM.render(<Hello />, document.getElementById('mydiv'))
 </script>
-
 
 </body>
 </html>
