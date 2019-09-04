@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import './App.css';
-import MapContainer from 'containers/MapContainer';
+import { MapContainer } from './containers/MapContainer';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 //import 'antd/dist/antd.css';
 
@@ -14,7 +14,7 @@ class App extends Component {
         </header>
         <div className="container h-100">
           <MapContainer />
-        </div>
+        </div>  
       </div>
     );
   }

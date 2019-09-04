@@ -9,7 +9,7 @@ import { Button, Input, Divider, message } from 'antd';
 
 const SG_COOR = { lat: 1.3521, lng: 103.8198 };
 
-class MapsContainer extends Component {
+export class MapContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -158,7 +158,7 @@ class MapsContainer extends Component {
     const { autoCompleteService, geoCoderService } = this.state; // Google Maps Services
     return (
       <div className="w-100 d-flex py-4 flex-wrap justify-content-center">
-        <h1 className="w-100 fw-md">Find Some Ice-Creams!</h1>
+        <h1 className="w-100 fw-md">Find the distance</h1>
         {/* Constraints section */}
         <section className="col-4">
           {mapsLoaded ?
@@ -237,5 +237,3 @@ class MapsContainer extends Component {
     )
   }
 }
-
-export default MapsContainer;
