@@ -1,29 +1,41 @@
 import React, { Component } from 'react';
-import  {Navbar, Nav, FormGroup} from 'react-bootstrap'
+import '../App.css';
+import { Container } from 'reactstrap';
+import Home from './Home';
+import ContactUs from './ContactUs';
+import About from './About';
+import ForeCast from './ForeCast';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+function Menu() {
+  return (
+    <Container>
+      <Router>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/Home/" >Home</Link>
+              </li>
+              <li>
+                <Link to="/About/">About</Link>
+              </li>
+              <li>
+                <Link to="/ForeCast/">ForeCast</Link>
+              </li>
+              <li>
+                <Link to="/ContactUs/">ContactUs</Link>
+              </li>
+            </ul>
+          </nav><hr />
+          <Route path="/Home/" component={Home} />
+          <Route path="/About/" component={About} />
+          <Route path="/ForeCast/" component={ForeCast} />
+          <Route path="/ContactUs/" component={ContactUs} />
 
-class Menu extends Component{
-    render(){
-        return (
-            <div className="App">
-            <header className="App-header">
-                Hello
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav>
-                            <Nav.Link href="#home">Home</Nav.Link> |
-                            <Nav.Link href="#link">About</Nav.Link>  |
-                            <Nav.Link href="#contact">Contact Me</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
-            </header>
-            </div>
-        );
-    }
+      </Router>
+    </Container>
+  );
 }
 
 export default Menu;

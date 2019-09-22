@@ -1,3 +1,28 @@
-.div{
-  background: pink
+.myNav{
+  text-align: center;
+}
+.table, th, td{
+  border: 1px solid black;
+}
+table{
+  width: 50%;
+}
+nav>ul{
+  padding-top: 20px;
+  margin: auto;
+  list-style-type: none;
+  overflow:hidden;
+}
+nav>ul>li{
+  margin-right: 30px;
+  text-align: center;
+  display:inline-block;
+}
+center>p{
+  margin-top: 20px;
+}
+img{
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
 }
