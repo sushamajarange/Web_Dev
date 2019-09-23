@@ -30,7 +30,8 @@ class About extends Component {
             </p>
             <h6>I want to be part of TechLadies Bootcamp because :</h6>
             <p>
-
+                If I'll tell in short so it would be like - To learn new technologies, to explore about current tech industry, 
+                to help the NGOs and to get a Job.
             </p>
             <h5>TECHNICAL SUMMARY :</h5>
             <table className="table">
